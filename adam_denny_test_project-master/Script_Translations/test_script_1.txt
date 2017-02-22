@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class test_script_1 : MonoBehaviour {
+
+    private Rigidbody rb;
+	//defines rb as a rigidbody
+
+	public float parameter2 = 10;
+	//defines parameter2 as 10
+
+	// Use this for initialization
+	void Start () {
+		print("Never name your script something this stupid, ever!");
+		//prints the text in the parenthesis in the console window
+
+		rb = GetComponent<Rigidbody>();
+		//defines rb as being the rigid body of the object it is currently attached to
+	}
+
+	// Update is called once per frame
+	void Update () {
+		rb.AddRelativeForce(Vector3.up * parameter2 * Input.GetAxis("Vertical"));
+		//upon pressing W or S applies a force of 10 to the object on its local axis
+
+		rb.AddTorque(Vector3.left * parameter2 * Input.GetAxis("Vertical"));
+		//upon pressing W or S torque is added to the object in a vertical direction at a speed of 10
+	}
+}

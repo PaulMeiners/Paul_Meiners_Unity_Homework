@@ -1,0 +1,47 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class testScript5 : MonoBehaviour {
+    public float parameter1 = 0.1f;
+	public float parameter2 = 0.1f;
+	public float parameter3 = 10;
+	public float parameter4 = -10;
+	private bool parameter5 = true;
+	// Use this for initialization
+	//define parameters
+
+	void Start () {
+
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if(parameter1 > parameter3)
+		{
+			parameter5 = false;
+		}
+		// if parameter1 is greater than parameter3 parameter5 is false
+
+		if (parameter5)
+		{
+			parameter1 += parameter2;
+			RenderSettings.skybox.SetFloat("_Exposure", parameter1);
+		}
+		//Parameter1 equals parameter1+parameter2 making the skybox take exposures every 0.2f causing the screen to flash
+
+		else
+		{
+			parameter1 -= parameter2;
+			RenderSettings.skybox.SetFloat("_Exposure", parameter1);
+		}
+		//Parameter1 equals parameter1-parameter2 making it zero, which makes the skybox do nothing
+
+		if(parameter1 < parameter4)
+		{
+			parameter5 = true;
+		}
+		//if parameter1 is less than parameter4 parameter5 is true
+
+	}
+}

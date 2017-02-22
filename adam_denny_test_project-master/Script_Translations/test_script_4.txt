@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class testScript4 : MonoBehaviour {
+
+    public float parameter1 = 100;
+	public float parameter2 = 10;
+	//define parameters
+
+	// Use this for initialization
+	void Start () {
+
+	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		print(collision.collider.name);
+		if(collision.collider.name != "Terrain")
+		{
+			parameter1 = parameter1 - parameter2;
+			print(parameter1);
+		}
+		//if the objects collides with the terrain prints the word terrain in the console
+
+		if(parameter1 < 0)
+		{
+			Destroy(gameObject);
+		}
+		//if object parameter1 is less than 0 the object will be destroyed
+	}
+}
