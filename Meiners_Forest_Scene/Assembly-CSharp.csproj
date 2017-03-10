@@ -86,8 +86,11 @@
      <Compile Include="Assets\Free_Rocks\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
      <Compile Include="Assets\Free_Rocks\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
      <Compile Include="Assets\Scripts\Shoot_Box.cs" />
+     <Compile Include="Assets\Scripts\rotator.cs" />
      <Compile Include="Assets\cameraController.cs" />
+     <Compile Include="Assets\colorArray.cs" />
      <Compile Include="Assets\colorSwitch.cs" />
+     <Compile Include="Assets\loopTest.cs" />
      <Compile Include="Assets\playerController.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Free_Rocks\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
