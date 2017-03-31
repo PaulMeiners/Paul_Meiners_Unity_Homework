@@ -14,5 +14,8 @@ public class Shoot_Box : MonoBehaviour {
 			clone = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
 			clone.GetComponent<Rigidbody>().AddForce(clone.transform.forward * speed);
 		}
+			
 	}
+
+
 }

@@ -6,11 +6,9 @@ public class damageCount : MonoBehaviour {
 
 	public float parameter1 = 100;
 	public float parameter2 = 10;
-	//define parameters
 
 	// Use this for initialization
 	void Start () {
-
 	}
 
 	void OnCollisionEnter(Collision collision)
